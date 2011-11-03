@@ -1,0 +1,68 @@
+# revision 21588
+# category Package
+# catalog-ctan /graphics/pstricks/contrib/pst-3dplot
+# catalog-date 2011-03-01 23:10:08 +0100
+# catalog-license lppl
+# catalog-version 1.94
+Name:		texlive-pst-3dplot
+Version:	1.94
+Release:	1
+Summary:	Draw 3d curves and graphs using PSTricks
+Group:		Publishing
+URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
+License:	LPPL
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-3dplot.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-3dplot.doc.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-3dplot.source.tar.xz
+BuildArch:	noarch
+BuildRequires:	texlive-tlpkg
+Requires(post):	texlive-tlpkg
+Conflicts:	texlive-texmf <= 20110705-3
+Conflicts:	texlive-doc <= 20110705-3
+
+%description
+A package using PSTricks to draw a large variety of graphs and
+plots, including 3D maths functions. Data can be read from
+external data files, making this package a generic tool for
+graphing within TeX/LaTeX, without the need for external tools.
+
+%pre
+    %_texmf_mktexlsr_pre
+
+%post
+    %_texmf_mktexlsr_post
+
+%preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
+
+%postun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_post
+    fi
+
+#-----------------------------------------------------------------------
+%files
+%{_texmfdistdir}/dvips/pst-3dplot/pst-3dplot.pro
+%{_texmfdistdir}/tex/generic/pst-3dplot/pst-3dplot.tex
+%{_texmfdistdir}/tex/latex/pst-3dplot/pst-3dplot.sty
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/Changes
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/README
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/more_docs/tb72voss3d.pdf
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.bib
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.dat
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.pdf
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.tex
+#- source
+%doc %{_texmfdistdir}/source/generic/pst-3dplot/Makefile
+
+#-----------------------------------------------------------------------
+%prep
+%setup -c -a0 -a1 -a2
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_texmfdistdir}
+cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
