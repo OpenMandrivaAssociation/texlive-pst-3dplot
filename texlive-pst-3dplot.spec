@@ -18,8 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A package using PSTricks to draw a large variety of graphs and
@@ -27,20 +25,12 @@ plots, including 3D maths functions. Data can be read from
 external data files, making this package a generic tool for
 graphing within TeX/LaTeX, without the need for external tools.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -57,7 +47,6 @@ graphing within TeX/LaTeX, without the need for external tools.
 %doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.tex
 #- source
 %doc %{_texmfdistdir}/source/generic/pst-3dplot/Makefile
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +57,3 @@ graphing within TeX/LaTeX, without the need for external tools.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
