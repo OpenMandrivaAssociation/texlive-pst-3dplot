@@ -6,7 +6,7 @@
 # catalog-version 1.94
 Name:		texlive-pst-3dplot
 Version:	1.94
-Release:	1
+Release:	2
 Summary:	Draw 3d curves and graphs using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
