@@ -1,13 +1,13 @@
-# revision 21588
+# revision 27233
 # category Package
 # catalog-ctan /graphics/pstricks/contrib/pst-3dplot
-# catalog-date 2011-03-01 23:10:08 +0100
+# catalog-date 2012-06-07 14:36:18 +0200
 # catalog-license lppl
-# catalog-version 1.94
+# catalog-version 1.97
 Name:		texlive-pst-3dplot
-Version:	1.94
-Release:	3
-Summary:	Draw 3d curves and graphs using PSTricks
+Version:	1.97
+Release:	1
+Summary:	Draw 3D objects in parallel projection, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
 License:	LPPL
