@@ -1,12 +1,12 @@
-# revision 32843
+# revision 33302
 # category Package
 # catalog-ctan /graphics/pstricks/contrib/pst-3dplot
-# catalog-date 2014-02-01 16:35:19 +0100
+# catalog-date 2014-03-26 20:10:14 +0100
 # catalog-license lppl
-# catalog-version 1.99
+# catalog-version 2.00
 Name:		texlive-pst-3dplot
-Version:	1.99
-Release:	2
+Version:	2.00
+Release:	1
 Summary:	Draw 3D objects in parallel projection, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
