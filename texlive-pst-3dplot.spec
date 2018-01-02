@@ -1,12 +1,6 @@
-# revision 33302
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-3dplot
-# catalog-date 2014-03-26 20:10:14 +0100
-# catalog-license lppl
-# catalog-version 2.00
 Name:		texlive-pst-3dplot
-Version:	2.00
-Release:	4
+Version:	2.04
+Release:	1
 Summary:	Draw 3D objects in parallel projection, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
@@ -34,16 +28,10 @@ graphing within TeX/LaTeX, without the need for external tools.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/dvips/pst-3dplot/pst-3dplot.pro
-%{_texmfdistdir}/tex/generic/pst-3dplot/pst-3dplot.tex
-%{_texmfdistdir}/tex/latex/pst-3dplot/pst-3dplot.sty
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/Changes
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/README
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.bib
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.dat
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.pdf
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/pst-3dplot-doc.tex
-%doc %{_texmfdistdir}/doc/generic/pst-3dplot/tb72voss3d.pdf
+%{_texmfdistdir}/dvips/pst-3dplot
+%{_texmfdistdir}/tex/generic/pst-3dplot
+%{_texmfdistdir}/tex/latex/pst-3dplot
+%doc %{_texmfdistdir}/doc/generic/pst-3dplot
 
 #-----------------------------------------------------------------------
 %prep
