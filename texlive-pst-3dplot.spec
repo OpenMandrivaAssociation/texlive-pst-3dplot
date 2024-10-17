@@ -3,7 +3,7 @@ Version:	68727
 Release:	1
 Summary:	Draw 3D objects in parallel projection, using PSTricks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-3dplot
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-3dplot.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-3dplot.doc.r%{version}.tar.xz
